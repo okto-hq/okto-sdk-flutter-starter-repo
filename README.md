@@ -13,6 +13,8 @@
 
 - Do google authentication setup on google cloud console using this [guide](https://sdk-docs.okto.tech/guide/google-authentication-setup)
 
+
+## Android Setup
 - Open `android/app/src/res/values/strings.xml`
 
     Put your Webclient Id here
@@ -22,6 +24,17 @@
 	<string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
     </resources>
     ```
+
+## IOS Setup
+- Create ios app in your Google Cloud using your iOS app bundle id, you can get it either from xcode or `info.plist` file
+- Download plist file from Google Cloud for iOS.
+- Rename it to GoogleService-Info.plist
+- Paste it inside `ios/Runner` directory.
+- Copy your `Client ID` and `iOS URL scheme` from Google Cloud
+- Open your info.plist file, present inside `ios/Runner`
+- And Paste your Client ID and iOS URL Scheme.
+- `flutter build ios`
+- And you are all set!.
 
 - Open `lib/okto.dart`
     - Put your client (non s2s api key) here  
